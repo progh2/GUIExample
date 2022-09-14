@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,8 +45,22 @@
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.테스트ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.상태증가ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.상태감소ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.라벨변경ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.하나ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.둘ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -57,7 +72,8 @@
             this.편집ToolStripMenuItem,
             this.서식ToolStripMenuItem,
             this.보기ToolStripMenuItem,
-            this.도움말ToolStripMenuItem});
+            this.도움말ToolStripMenuItem,
+            this.테스트ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 33);
@@ -168,11 +184,112 @@
             this.toolStripSplitButton1.Size = new System.Drawing.Size(45, 29);
             this.toolStripSplitButton1.Text = "toolStripSplitButton1";
             // 
+            // 테스트ToolStripMenuItem
+            // 
+            this.테스트ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.상태증가ToolStripMenuItem,
+            this.상태감소ToolStripMenuItem,
+            this.라벨변경ToolStripMenuItem});
+            this.테스트ToolStripMenuItem.Name = "테스트ToolStripMenuItem";
+            this.테스트ToolStripMenuItem.Size = new System.Drawing.Size(82, 29);
+            this.테스트ToolStripMenuItem.Text = "테스트";
+            // 
+            // 상태증가ToolStripMenuItem
+            // 
+            this.상태증가ToolStripMenuItem.Name = "상태증가ToolStripMenuItem";
+            this.상태증가ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.상태증가ToolStripMenuItem.Text = "상태 증가";
+            this.상태증가ToolStripMenuItem.Click += new System.EventHandler(this.상태증가ToolStripMenuItem_Click);
+            // 
+            // 상태감소ToolStripMenuItem
+            // 
+            this.상태감소ToolStripMenuItem.Name = "상태감소ToolStripMenuItem";
+            this.상태감소ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.상태감소ToolStripMenuItem.Text = "상태 감소";
+            this.상태감소ToolStripMenuItem.Click += new System.EventHandler(this.상태감소ToolStripMenuItem_Click);
+            // 
+            // 라벨변경ToolStripMenuItem
+            // 
+            this.라벨변경ToolStripMenuItem.Name = "라벨변경ToolStripMenuItem";
+            this.라벨변경ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.라벨변경ToolStripMenuItem.Text = "라벨 변경";
+            this.라벨변경ToolStripMenuItem.Click += new System.EventHandler(this.라벨변경ToolStripMenuItem_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.하나ToolStripMenuItem,
+            this.둘ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(121, 68);
+            // 
+            // 하나ToolStripMenuItem
+            // 
+            this.하나ToolStripMenuItem.Name = "하나ToolStripMenuItem";
+            this.하나ToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.하나ToolStripMenuItem.Text = "하나";
+            // 
+            // 둘ToolStripMenuItem
+            // 
+            this.둘ToolStripMenuItem.Name = "둘ToolStripMenuItem";
+            this.둘ToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.둘ToolStripMenuItem.Text = "둘";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 33);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 33);
+            this.toolStrip1.TabIndex = 3;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(134, 28);
+            this.toolStripLabel1.Text = "toolStripLabel1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton3.Text = "toolStripButton3";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -182,6 +299,9 @@
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,6 +324,18 @@
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
+        private System.Windows.Forms.ToolStripMenuItem 테스트ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 상태증가ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 상태감소ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 라벨변경ToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 하나ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 둘ToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }
 
